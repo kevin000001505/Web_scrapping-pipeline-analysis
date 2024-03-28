@@ -8,7 +8,8 @@
 ### My goal is to create a machine that can:
 
 - Automatically scrape data from websites.
-- Instantly process this data with PowerBI in Azure.
+- Stored the data into PostgreSQL
+
 
 **Why Scrapy and Selenium?**
 
