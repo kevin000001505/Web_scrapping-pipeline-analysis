@@ -5,7 +5,9 @@
 
 #### [Pipeline code](https://github.com/kevin000001505/Web_scrapping-pipeline-analysis/blob/main/Earthquake/earthquake/earthquake/pipelines.py)
 
-#### [Setting code](https://github.com/kevin000001505/Web_scrapping-pipeline-analysis/blob/main/Earthquake/earthquake/earthquake/settings.py)
+##### [Setting code](https://github.com/kevin000001505/Web_scrapping-pipeline-analysis/blob/main/Earthquake/earthquake/earthquake/settings.py)
+
+#### [Automatically updated data code](https://github.com/kevin000001505/Selenium-Web-scrapping.git)
 
 ### Website
  <img src="Images/截圖 2024-03-28 下午4.53.35.png" alt="Example Image" title="An example image" width="700" height="400" />
