@@ -2,10 +2,8 @@ from fastapi import FastAPI
 import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine, engine
-
-region = input("Enter a region: ")
-start_date = input("Enter a start date: ")
-end_date = input("Enter an end date: ")
+import datetime
+from pydantic import BaseModel
 
 def get_postgresql_conn():
     connection = psycopg2.connect(
@@ -21,16 +19,16 @@ def get_postgresql_conn():
 
 app = FastAPI()
 @app.get("/")
-def read_root():
+async def read_root():
     return {"Hello": "World"}
 
-@app.get("/earthquake_info")
-def earthquake_info(
-    region: str = "",
-    start_date: str = "",
-    end_date: str = ""
+@app.get("/")
+async def earthquake_info(
+    region: str ,
+    start_date: str ,
+    end_date: str
 ):
-    print('successful')
+
     sql = f"""
     select * from earthquake
     where region = '{region}'
@@ -41,3 +39,4 @@ def earthquake_info(
     data_df = pd.read_sql(sql, con = postgre_conn)
     data_dict = data_df.to_dict(orient = 'records')
     return {'date': data_dict}
+
